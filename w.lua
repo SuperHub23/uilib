@@ -1,13 +1,13 @@
 local GuiLibrary = {}
 
-function GuiLibrary:CreateScreenGui(parent)
+function GuiLibrary.CreateScreenGui(parent)
     local screenGui = Instance.new("ScreenGui")
     screenGui.Parent = parent or game.Players.LocalPlayer:WaitForChild("PlayerGui")
     screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     return screenGui
 end
 
-function GuiLibrary:CreateFrame(parent, position, size, bgColor)
+function GuiLibrary.CreateFrame(parent, position, size, bgColor)
     local frame = Instance.new("Frame")
     frame.Parent = parent
     frame.BackgroundColor3 = bgColor or Color3.fromRGB(12, 42, 35)
@@ -22,7 +22,7 @@ function GuiLibrary:CreateFrame(parent, position, size, bgColor)
     return frame
 end
 
-function GuiLibrary:CreateLabel(parent, position, size, text, textColor, bgColor)
+function GuiLibrary.CreateLabel(parent, position, size, text, textColor, bgColor)
     local label = Instance.new("TextLabel")
     label.Parent = parent
     label.BackgroundColor3 = bgColor or Color3.fromRGB(12, 16, 255)
@@ -38,7 +38,7 @@ function GuiLibrary:CreateLabel(parent, position, size, text, textColor, bgColor
     return label
 end
 
-function GuiLibrary:CreateButton(parent, position, size, text, textColor, bgColor, onClick)
+function GuiLibrary.CreateButton(parent, position, size, text, textColor, bgColor, onClick)
     local frame = Instance.new("Frame")
     frame.Parent = parent
     frame.BackgroundColor3 = Color3.fromRGB(115, 115, 115)
